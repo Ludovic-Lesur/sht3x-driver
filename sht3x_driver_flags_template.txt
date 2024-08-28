@@ -1,0 +1,16 @@
+/*
+ * sht3x_driver_flags.h
+ *
+ *  Created on: 27 aug. 2024
+ *      Author: Ludo
+ */
+
+#ifndef __SHT3X_DRIVER_FLAGS_H__
+#define __SHT3X_DRIVER_FLAGS_H__
+
+/*** SHT3X driver compilation flags ***/
+
+#define SHT3X_DRIVER_I2C_ERROR_BASE_LAST	0
+#define SHT3X_DRIVER_DELAY_ERROR_BASE_LAST	0
+
+#endif /* __SHT3X_DRIVER_FLAGS_H__ */
