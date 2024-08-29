@@ -61,12 +61,12 @@ SHT3X_status_t SHT3X_de_init(void);
 SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_degrees, int32_t* humidity_percent);
 
 /*******************************************************************/
-#define SHT3X_exit_error(base) { if (sht3x_status != SHT3X_SUCCESS) { status = (base + sht3x_status); goto errors; } }
+#define SHT3X_exit_error(base) { ERROR_check_exit(sht3x_status, SHT3X_SUCCESS, base) }
 
 /*******************************************************************/
-#define SHT3X_stack_error(base) { if (sht3x_status != SHT3X_SUCCESS) { ERROR_stack_add(base + sht3x_status); } }
+#define SHT3X_stack_error(base) { ERROR_check_stack(sht3x_status, SHT3X_SUCCESS, base) }
 
 /*******************************************************************/
-#define SHT3X_stack_exit_error(base, code) { if (sht3x_status != SHT3X_SUCCESS) { ERROR_stack_add(base + sht3x_status); status = code; goto errors; } }
+#define SHT3X_stack_exit_error(base, code) { ERROR_check_stack_exit(sht3x_status, SHT3X_SUCCESS, base, code) }
 
 #endif /* __SHT3X_H__ */
