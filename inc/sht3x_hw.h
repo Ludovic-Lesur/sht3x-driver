@@ -15,7 +15,7 @@
 
 /*!******************************************************************
  * \fn SHT3X_status_t SHT3X_HW_init(void)
- * \brief Init SHT3X hardware interface.
+ * \brief Init SHT3x hardware interface.
  * \param[in]  	none
  * \param[out] 	none
  * \retval		Function execution status.
@@ -24,7 +24,7 @@ SHT3X_status_t SHT3X_HW_init(void);
 
 /*!******************************************************************
  * \fn SHT3X_status_t SHT3X_HW_de_init(void)
- * \brief Release SHT3X hardware interface.
+ * \brief Release SHT3x hardware interface.
  * \param[in]  	none
  * \param[out] 	none
  * \retval		Function execution status.

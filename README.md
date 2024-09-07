@@ -6,12 +6,14 @@ This repository contains the **SHT3x** temperature and humidity sensor driver.
 
 The driver relies on:
 
+* An external `types.h` header file defining the **standard C types** of the targeted MCU.
 * The **embedded utility functions** defined in the [embedded-utils](https://github.com/Ludovic-Lesur/embedded-utils) repository.
 
 Here is the versions compatibility table:
 
 | **sht3x-driver** | **embedded-utils** |
 |:---:|:---:|
+| [sw1.2](https://github.com/Ludovic-Lesur/sht3x-driver/releases/tag/sw1.2) | >= [sw1.3](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw1.3) |
 | [sw1.1](https://github.com/Ludovic-Lesur/sht3x-driver/releases/tag/sw1.1) | >= [sw1.3](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw1.3) |
 | [sw1.0](https://github.com/Ludovic-Lesur/sht3x-driver/releases/tag/sw1.0) | [sw1.0](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw1.0) to [sw1.2](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw1.2) |
 
