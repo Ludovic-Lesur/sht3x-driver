@@ -22,5 +22,6 @@ Here is the versions compatibility table:
 | **Flag name** | **Value** | **Description** |
 |:---:|:---:|:---:|
 | `SHT3X_DRIVER_DISABLE_FLAGS_FILE` | `defined` / `undefined` | Disable the `sht3x_driver_flags.h` header file inclusion when compilation flags are given in the project settings or by command line. |
+| `SHT3X_DRIVER_DISABLE` | `defined` / `undefined` | Disable the SHT3x driver. |
 | `SHT3X_DRIVER_I2C_ERROR_BASE_LAST` | `<value>` | Last error base of the low level I2C driver. |
 | `SHT3X_DRIVER_DELAY_ERROR_BASE_LAST` | `<value>` | Last error base of the low level delay driver. |

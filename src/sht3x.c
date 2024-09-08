@@ -7,8 +7,13 @@
 
 #include "sht3x.h"
 
+#ifndef SHT3X_DRIVER_DISABLE_FLAGS_FILE
+#include "sht3x_driver_flags.h"
+#endif
 #include "sht3x_hw.h"
 #include "types.h"
+
+#ifndef SHT3X_DRIVER_DISABLE
 
 /*** SHT3x local macros ***/
 
@@ -67,3 +72,5 @@ SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temp
 errors:
 	return status;
 }
+
+#endif /* SHT3X_DRIVER_DISABLE */

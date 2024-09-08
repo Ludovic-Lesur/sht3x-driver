@@ -8,8 +8,13 @@
 #ifndef __SHT3X_HW_H__
 #define __SHT3X_HW_H__
 
+#ifndef SHT3X_DRIVER_DISABLE_FLAGS_FILE
+#include "sht3x_driver_flags.h"
+#endif
 #include "sht3x.h"
 #include "types.h"
+
+#ifndef SHT3X_DRIVER_DISABLE
 
 /*** SHT3X HW functions ***/
 
@@ -61,5 +66,7 @@ SHT3X_status_t SHT3X_HW_i2c_read(uint8_t i2c_address, uint8_t* data, uint8_t dat
  * \retval		Function execution status.
  *******************************************************************/
 SHT3X_status_t SHT3X_HW_delay_milliseconds(uint32_t delay_ms);
+
+#endif /* SHT3X_DRIVER_DISABLE */
 
 #endif /* __SHT3X_HW_H__ */

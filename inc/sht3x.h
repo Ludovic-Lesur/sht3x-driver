@@ -30,6 +30,8 @@ typedef enum {
 	SHT3X_ERROR_BASE_LAST = (SHT3X_ERROR_BASE_DELAY + SHT3X_DRIVER_DELAY_ERROR_BASE_LAST)
 } SHT3X_status_t;
 
+#ifndef SHT3X_DRIVER_DISABLE
+
 /*** SHT3x functions ***/
 
 /*!******************************************************************
@@ -68,5 +70,7 @@ SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temp
 
 /*******************************************************************/
 #define SHT3X_stack_exit_error(base, code) { ERROR_check_stack_exit(sht3x_status, SHT3X_SUCCESS, base, code) }
+
+#endif /* SHT3X_DRIVER_DISABLE */
 
 #endif /* __SHT3X_H__ */

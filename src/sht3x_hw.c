@@ -7,8 +7,13 @@
 
 #include "sht3x_hw.h"
 
+#ifndef SHT3X_DRIVER_DISABLE_FLAGS_FILE
+#include "sht3x_driver_flags.h"
+#endif
 #include "sht3x.h"
 #include "types.h"
+
+#ifndef SHT3X_DRIVER_DISABLE
 
 /*** SHT3X HW functions ***/
 
@@ -59,3 +64,5 @@ SHT3X_status_t __attribute__((weak)) SHT3X_HW_delay_milliseconds(uint32_t delay_
 	UNUSED(delay_ms);
 	return status;
 }
+
+#endif /* SHT3X_DRIVER_DISABLE */
