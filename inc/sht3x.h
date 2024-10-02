@@ -20,14 +20,14 @@
  * \brief SHT3X driver error codes.
  *******************************************************************/
 typedef enum {
-	// Driver errors.
-	SHT3X_SUCCESS = 0,
-	SHT3X_ERROR_NULL_PARAMETER,
-	// Low level drivers errors.
-	SHT3X_ERROR_BASE_I2C = 0x0100,
-	SHT3X_ERROR_BASE_DELAY = (SHT3X_ERROR_BASE_I2C + SHT3X_DRIVER_I2C_ERROR_BASE_LAST),
-	// Last base value.
-	SHT3X_ERROR_BASE_LAST = (SHT3X_ERROR_BASE_DELAY + SHT3X_DRIVER_DELAY_ERROR_BASE_LAST)
+    // Driver errors.
+    SHT3X_SUCCESS = 0,
+    SHT3X_ERROR_NULL_PARAMETER,
+    // Low level drivers errors.
+    SHT3X_ERROR_BASE_I2C = 0x0100,
+    SHT3X_ERROR_BASE_DELAY = (SHT3X_ERROR_BASE_I2C + SHT3X_DRIVER_I2C_ERROR_BASE_LAST),
+    // Last base value.
+    SHT3X_ERROR_BASE_LAST = (SHT3X_ERROR_BASE_DELAY + SHT3X_DRIVER_DELAY_ERROR_BASE_LAST)
 } SHT3X_status_t;
 
 #ifndef SHT3X_DRIVER_DISABLE
@@ -37,28 +37,28 @@ typedef enum {
 /*!******************************************************************
  * \fn SHT3X_status_t SHT3X_init(void)
  * \brief Init SHT3X driver.
- * \param[in]  	none
- * \param[out] 	none
- * \retval		Function execution status.
+ * \param[in]   none
+ * \param[out]  none
+ * \retval      Function execution status.
  *******************************************************************/
 SHT3X_status_t SHT3X_init(void);
 
 /*!******************************************************************
  * \fn SHT3X_status_t SHT3X_de_init(void)
  * \brief Release SHT3X driver.
- * \param[in]  	none
- * \param[out] 	none
- * \retval		Function execution status.
+ * \param[in]   none
+ * \param[out]  none
+ * \retval      Function execution status.
  *******************************************************************/
 SHT3X_status_t SHT3X_de_init(void);
 
 /*!******************************************************************
  * \fn SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_degrees, int32_t* humidity_percent)
  * \brief Perform temperature and humidity measurements.
- * \param[in]  	i2c_address: I2C address of the sensor.
- * \param[out] 	temperature_degrees: Pointer to integer that will contain the temperature in Celsius degrees.
- * \param[out] 	humidity_percent: Pointer to integer that will contain the humidity in percent.
- * \retval		Function execution status.
+ * \param[in]   i2c_address: I2C address of the sensor.
+ * \param[out]  temperature_degrees: Pointer to integer that will contain the temperature in Celsius degrees.
+ * \param[out]  humidity_percent: Pointer to integer that will contain the humidity in percent.
+ * \retval      Function execution status.
  *******************************************************************/
 SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_degrees, int32_t* humidity_percent);
 
