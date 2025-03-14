@@ -11,6 +11,7 @@
 #ifndef SHT3X_DRIVER_DISABLE_FLAGS_FILE
 #include "sht3x_driver_flags.h"
 #endif
+#include "error.h"
 #include "types.h"
 
 /*** SHT3x structures ***/
@@ -24,7 +25,7 @@ typedef enum {
     SHT3X_SUCCESS = 0,
     SHT3X_ERROR_NULL_PARAMETER,
     // Low level drivers errors.
-    SHT3X_ERROR_BASE_I2C = 0x0100,
+    SHT3X_ERROR_BASE_I2C = ERROR_BASE_STEP,
     SHT3X_ERROR_BASE_DELAY = (SHT3X_ERROR_BASE_I2C + SHT3X_DRIVER_I2C_ERROR_BASE_LAST),
     // Last base value.
     SHT3X_ERROR_BASE_LAST = (SHT3X_ERROR_BASE_DELAY + SHT3X_DRIVER_DELAY_ERROR_BASE_LAST)
