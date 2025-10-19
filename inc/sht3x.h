@@ -54,14 +54,14 @@ SHT3X_status_t SHT3X_init(void);
 SHT3X_status_t SHT3X_de_init(void);
 
 /*!******************************************************************
- * \fn SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_degrees, int32_t* humidity_percent)
+ * \fn SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_tenth_degrees, int32_t* humidity_percent)
  * \brief Perform temperature and humidity measurements.
  * \param[in]   i2c_address: I2C address of the sensor.
- * \param[out]  temperature_degrees: Pointer to integer that will contain the temperature in Celsius degrees.
+ * \param[out]  temperature_tenth_degrees: Pointer to integer that will contain the temperature in 1/10 Celsius degrees.
  * \param[out]  humidity_percent: Pointer to integer that will contain the humidity in percent.
  * \retval      Function execution status.
  *******************************************************************/
-SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_degrees, int32_t* humidity_percent);
+SHT3X_status_t SHT3X_get_temperature_humidity(uint8_t i2c_address, int32_t* temperature_tenth_degrees, int32_t* humidity_percent);
 
 /*******************************************************************/
 #define SHT3X_exit_error(base) { ERROR_check_exit(sht3x_status, SHT3X_SUCCESS, base) }
